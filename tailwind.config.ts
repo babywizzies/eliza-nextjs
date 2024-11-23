@@ -1,18 +1,20 @@
-import type { Config } from "tailwindcss";
-
-export default {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+// tailwind.config.js
+module.exports = {
+  darkMode: 'media', // Enables automatic dark mode detection
+  content: ['./app/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'Arial', 'sans-serif'],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        teal: {
+          400: '#76c7c0',
+          500: '#63aea8',
+          600: '#51948f',
+        },
       },
     },
   },
   plugins: [],
-} satisfies Config;
+};
